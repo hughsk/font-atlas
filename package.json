@@ -1,0 +1,36 @@
+{
+  "name": "font-atlas",
+  "version": "1.0.0",
+  "description": "Populate a <canvas> element with a font texture atlas",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "beefy example.js --open"
+  },
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "dependencies": {},
+  "devDependencies": {
+    "beefy": "^2.0.2",
+    "browserify": "^4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/font-atlas.git"
+  },
+  "keywords": [
+    "font",
+    "type",
+    "typography",
+    "gamedev",
+    "canvas",
+    "browser",
+    "browserify",
+    "element",
+    "atlas",
+    "text"
+  ],
+  "homepage": "https://github.com/hughsk/font-atlas",
+  "bugs": {
+    "url": "https://github.com/hughsk/font-atlas/issues"
+  }
+}
