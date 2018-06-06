@@ -1,6 +1,6 @@
 'use strict'
 
-var Font = require('css-font')
+var stringifyFont = require('css-font/stringify')
 var defaultChars = [32, 126]
 
 module.exports = atlas
@@ -14,7 +14,7 @@ function atlas(options) {
   var step   = options.step || [32, 32]
   var chars  = options.chars || defaultChars
 
-  if (font && typeof font !== 'string') font = Font.stringify(font)
+  if (font && typeof font !== 'string') font = stringifyFont(font)
 
   if (!Array.isArray(chars)) {
     chars = String(chars).split('')
