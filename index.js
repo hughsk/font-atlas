@@ -1,3 +1,5 @@
+'use strict'
+
 var defaultChars = [32, 126]
 
 module.exports = atlas
