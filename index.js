@@ -1,3 +1,6 @@
+'use strict'
+
+var stringifyFont = require('css-font/stringify')
 var defaultChars = [32, 126]
 
 module.exports = atlas
@@ -6,15 +9,12 @@ function atlas(options) {
   options = options || {}
 
   var canvas = options.canvas || document.createElement('canvas')
-  var family = options.family || 'monospace'
+  var font = options.font
   var shape  = options.shape || [512, 512]
   var step   = options.step || [32, 32]
-  var size   = options.size || 16
   var chars  = options.chars || defaultChars
 
-  if (typeof size === 'number') {
-    size = size + 'px'
-  }
+  if (font && typeof font !== 'string') font = stringifyFont(font)
 
   if (!Array.isArray(chars)) {
     chars = String(chars).split('')
@@ -41,7 +41,7 @@ function atlas(options) {
   ctx.fillStyle = '#000'
   ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-  ctx.font = size + ' ' + family
+  ctx.font = font
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   ctx.fillStyle = '#fff'
