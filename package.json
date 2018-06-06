@@ -5,14 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "beefy example.js --open"
+    "test": "budo example.js"
   },
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
-  "dependencies": {},
-  "devDependencies": {
-    "beefy": "^2.0.2",
-    "browserify": "^4.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/hughsk/font-atlas.git"
