@@ -8,10 +8,10 @@ module.exports = atlas
 function atlas(options) {
   options = options || {}
 
+  var shape  = options.shape ? options.shape : options.canvas ? [options.canvas.width, options.canvas.height] : [512, 512]
   var canvas = options.canvas || document.createElement('canvas')
-  var font = options.font
-  var shape  = options.shape || [512, 512]
-  var step   = options.step || [32, 32]
+  var font   = options.font
+  var step   = typeof options.step === 'number' ? [options.step, options.step] : options.step || [32, 32]
   var chars  = options.chars || defaultChars
 
   if (font && typeof font !== 'string') font = stringifyFont(font)
